@@ -208,34 +208,86 @@
 #                 print([i],[j] , "=", listN[i][j])
 
 
-genderList = ["Мужской","Женский"]
-raceList = ["Человек","Эльф","Гном","Орк","Троль","Огр"]
-roleList = ["Воин", "Лучник", "Маг", "Палладин"]
+# genderList = ["Мужской","Женский"]
+# raceList = ["Человек","Эльф","Гном","Орк","Троль","Огр"]
+# roleList = ["Воин", "Лучник", "Маг", "Палладин"]
 
-textRace = ""
-for i in range(0,len(raceList)):
-        textRace += f"{i} - {raceList[i]}\n"
+# textRace = ""
+# for i in range(0,len(raceList)):
+#         textRace += f"{i} - {raceList[i]}\n"
 
-reg_race = False
-while reg_race == False:
-        myRace = int(input(f"Выберите рассу:\n{textRace}"))
-        if myRace > len(raceList) or myRace < 0:
-                print("Ошибка. Выберите из перечисленного!")
-        else:
-                for i in range(0, len(raceList)):
-                        if myRace == i:
-                                race = raceList[i]
-                                reg_race = True
-                                print("вы выбрали", myRace)
-                                break  # можно без брейка
-                        elif myRace == len(raceList):
-                                reg_gender = False
-                                break
+# reg_race = False
+# while reg_race == False:
+#         myRace = int(input(f"Выберите рассу:\n{textRace}"))
+#         if myRace > len(raceList) or myRace < 0:
+#                 print("Ошибка. Выберите из перечисленного!")
+#         else:
+#                 for i in range(0, len(raceList)):
+#                         if myRace == i:
+#                                 race = raceList[i]
+#                                 reg_race = True
+#                                 print("вы выбрали", myRace)
+#                                 break  # можно без брейка
+#                         elif myRace == len(raceList):
+#                                 reg_gender = False
+#                                 break
+
+
+
+#  ______________________________________________________________
+#  ______________________________________________________________
+#  list.append()      list.remove()    pop po indexy
+
+#  метод доб в список (имя)
+#  после ввода вернуться в список
+#  метод удал по имени
+#  просмотр гостей
+#  если гостей > 5 и гостей <10, то закончить цикл break
+#  else: нельзя приглашть гостей <5 и гостей >10
+#  blocklist - запрет на вход: Арнольд и Халк
+
+#  _______________________________________________________________
+
+list = []
+while True:
+        print (f"1 - добавить гостя\n2 - удалить гостя\n3 - просмотреть список приглашенных гостей\n4 - гость, которому вход запрещен :")
+
+        action = input("Введите число для требуемого действия: ")
+
+# 1 пригласить гостя
+# 2 удалить гостя
+# 3 просмотр списка гостей
+# 4 блок лист 
+
+#  guest = [федоров, сидоров, макаров, чернов, максимова, рейх, ванин, ]
+
+        if action == 1:
+                plus = input("Фамилия приглашённого гостя: ")
+                list.append(plus)
+                print(list)
+
+        if action == 2:
+                del_guest = input("Фамилия удаленного гостя: ")
+                list.remove(del_guest)
+                print(list)
+
+        if action == 3:
+                print(list)
+
+        if action == 4:
+                block_guest = input("Запретить вход: ")
+                
+        if action == 5:      
+                #  если гостей > 5 и гостей <10, то закончить цикл break
+                # 
+                # сделать комментарии  
+
 
                         
                 
 
 
 
-
+# blockguest = []
+# reg = []
 
