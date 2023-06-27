@@ -12,9 +12,9 @@
 # }
 
 # print(infoProduct["nameProduct"])
+
 # print(infoProduct["price"])
 # print(infoProduct["sale"])
-
 # myName = input("inter yohr name: ")
 # myAge = int(input("Введите ваш возраст: "))
 
@@ -354,3 +354,9 @@ while True:
                 break
             elif len(userList) - 1 == i:
                 print("Неверный логин или пароль")
+
+
+
+# *****************_________+++ Вторник  27.06.2023  "Функции" +++_________*********************
+# ______________________________________________________________________________________________
+
