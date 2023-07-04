@@ -223,30 +223,71 @@
 
 
 
+# from abc import ABC, abstractclassmethod
 
+# class Animal(ABC):
+#     def __init__(self, name, sound):
+#         self.name = name
+#         self.sound = sound
 
-class Animal:
+#     def activeSound(self):
+#         print(self.sound)
+
+# class Cat(Animal):
+#     def __init__(self, name):
+#         super().__init__(name, "Мяу")
+
+#     def purr(self):
+#         print("Мурлыкает")            
+
+# class Dog(Animal):
+#     def __init__(self, name):
+#         super().__init__(name, "Гав")
+
+#     def digHole(self):
+#         print("Копает яму")
+
+# myCat = Cat("Вася")
+# myCat.purr()
+#&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+# 4 июля урок (абстрактный метод)
+
+class Bird():
     def __init__(self, name, sound):
         self.name = name
         self.sound = sound
 
+    def eat(self):
+        print("Ест")
+
+    def hunting(self):
+        print("Охотятся")
+
     def activeSound(self):
         print(self.sound)
 
-class Cat(Animal):
-    def __init__(self, name):
-        super().__init__(name, "Мяу")
+class noFly(Bird):
+    def __init__(self, name, sound=""):
+        super().__init__(name, sound)
+    
+    def goes(self):
+        print("Летает")
 
-    def purr(self):
-        print("Мурлыкает")            
+class Fly(noFly):
+    def __init__(self, name, sound=""):
+        super().__init__(name, sound)
 
-class Dog(Animal):
-    def __init__(self, name):
-        super().__init__(name, "Гав")
+    def noFly(self):
+        print("Летает")
 
-    def digHole(self):
-        print("Копает яму")
+class Crow(Fly):
+    def __init__(self, name, sound=""):
+        super().__init__(name, "-Кар-кар!!!")
 
-myCat = Cat("Вася")
-myCat.purr()
+crow = Crow("Гриша")
+crow.activeSound()
+
+
+
 
